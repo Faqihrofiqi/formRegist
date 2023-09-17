@@ -20,7 +20,7 @@ function openDefaultTab() {
 // Fungsi untuk memvalidasi data ketika submit
 function validasiData(nama, umur, saku) {
     if (!nama || !umur || !saku) {
-        return "Semua field harus diisi.";
+        return "Data gagal disimpan \nPeriksa Kembali data";
     }
 
     if (nama.length < 10) {
@@ -52,6 +52,8 @@ function tambahData() {
     if (error) {
         alert(error);
         return;
+    }else{
+        alert("Data Berhasil Disimpan")
     }
 
     const data = {
