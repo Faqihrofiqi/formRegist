@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Table Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" onclick="openTab(event, 'FormTab')" href="#"
+              >Registrasi</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="openTab(event, 'ListTab')" href="#"
+              >List Pendaftar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="FormTab" class="form-wrap">
+      <div class="form-box registrasi">
+        <h2>Registrasi</h2>
+        <form action="#">
+          <div class="input-box">
+            <input
+              type="text"
+              class="form-control"
+              id="InputNama"
+              placeholder="Minimal 10 karakter"
+            />
+            <label for="nama" class="form-label">Nama :</label>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              class="form-control"
+              id="InputUmur"
+              placeholder="Minimal 25 Tahun"
+            />
+            <label for="umur" class="form-label">Umur :</label>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              class="form-control"
+              id="InputSaku"
+              placeholder="Minimal Rp. 100.000 - Rp. 1.000.000"
+            />
+            <label for="sangu" class="form-label">Uang Saku :</label>
+          </div>
+          <input
+            type="button"
+            class="btn"
+            value="Submit"
+            onclick="tambahData()"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div id="ListTab" class="form-wrap">
+      <div class="form-box list">
+        <h2>List</h2>
+        <table id="tabelHasil" class="tabel-list">
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Umur</th>
+              <th>Sangu</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="dataTabel">
+            <!-- Data hasil inputan -->
+          </tbody>
+        </table>
+        <p id="dataResume" class="resume"></p>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
