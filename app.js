@@ -31,7 +31,7 @@ function validasiData(nama, umur, saku) {
         return "Umur harus minimal 25 tahun.";
     }
 
-    // Memeriksa Sangu
+    // Memeriksa uang saku
     if (saku < 100000 || saku > 1000000) {
         return "Uang Saku harus minimal 100.000 dan maksimal 1.000.000.";
     }
@@ -112,7 +112,7 @@ function tampilkanData() {
         }
 
         sakuRupiah = split[1] != undefined ? sakuRupiah + ',' + split[1] : sakuRupiah;
-        cell3.innerHTML = `Rp. ${sanguRupiah}`;
+        cell3.innerHTML = `Rp. ${sakuRupiah}`;
 
         // Menambahkan tombol "Remove" dengan atribut data-index
         const removeButton = document.createElement("button");
